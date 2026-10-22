@@ -8,7 +8,8 @@ on:
 jobs:
   build:
     name: Build and Create IPA
-    runs-on: macos-latest
+    # Đổi sang macos-13 (máy chủ Intel) để tránh bị sập do quá tải hàng chờ arm64
+    runs-on: macos-13
 
     steps:
     - name: Checkout code
